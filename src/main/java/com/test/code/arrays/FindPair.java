@@ -24,7 +24,7 @@ public class FindPair {
         while (j >= 0) {
             int number = array[j];
             int diff = sumValue - number;
-            int index = findfirstIndexGreaterThan(diff, array, j);
+            int index = findFirstIndexGreaterThan(diff, array, j);
             if (index != -1) {
                 count = count + j - index;
             }
@@ -33,7 +33,7 @@ public class FindPair {
         return count;
     }
 
-    private static int findfirstIndexGreaterThan(int diff, int[] array, int j) {
+    private static int findFirstIndexGreaterThan(int diff, int[] array, int j) {
         for (int i = 0; i < j; i++) {
             int value = array[i];
             if (value > diff) {
